@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Her Out</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Music Modal -->
+    <div id="musicModal" class="modal">
+        <div class="modal-content">
+            <h2>Can I Play a Sweet Song for You? 🎶💖</h2>
+            <p>It's a special song just for you! 💕</p>
+                  <button class="modal-button" onclick="playMusic()">Yes, play it! 💖</button>
+                  <button class="modal-button" onclick="playMusic()">No, but let it play anyway! 💕</button>
+                </div>
+              </div> 
+    
+    <div class="container">
+      <div
+        class="tenor-gif-embed"
+        data-postid="15974530976611222074"
+        data-share-method="host"
+        data-aspect-ratio="1.26923"
+        data-width="100%"
+      >
+        <a
+          href="https://tenor.com/view/peach-goma-phone-gif-15974530976611222074"
+          >Peach Goma Phone Sticker</a
+        >from
+        <a href="https://tenor.com/search/peach+goma-stickers"
+          >Peach Goma Stickers</a
+        >
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+
+      <h1>Manjo na Boss JI! Kitna bhav khaogi 😭</h1>
+      <div class="btn">
+        <a href="yes.html">Yes</a>
+        <a href="#" id="move-random">No</a>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    
+    <!-- Background music -->
+    <audio id="apology-song" loop>
+      <source src="yo.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <script src="forgive.js"></script>
+    <script>
+      function playMusic() {
+        const music = document.getElementById("apology-song");
+        music.play();
+        document.getElementById("musicModal").style.display = "none"; // Hide modal after choosing
+      }
+
+      function openForgivePage() {
+        const music = document.getElementById("apology-song");
+        music.pause(); // Stop the current music
+        music.currentTime = 0; // Reset the music to the beginning
+        window.open("forgive.html", "_blank");
+      }
+
+      window.onload = () => {
+        document.getElementById("musicModal").style.display = "flex"; // Show modal on load
+      };
+    </script>
+  </body>
+</html>
